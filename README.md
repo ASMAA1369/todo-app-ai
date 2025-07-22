@@ -36,7 +36,7 @@ Le projet a été conçu et optimisé avec l’assistance de l’intelligence ar
 
 1. Cloner le dépôt :  
    ```bash
-   git clone https://github.com/TON_UTILISATEUR/todo-app-ia.git
+   git clone https://github.com/ASMAA1369/todo-app-ai.git
    cd todo-app-ia
 
 ## 👤 Auteur
