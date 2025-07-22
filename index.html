@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App IA Ultra</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="icon.png" />
+</head>
+<body>
+  <div class="app-container">
+    <h1>📝 Todo App IA</h1>
+
+    <div class="top-controls">
+      <button id="toggle-theme">🌙 Thème</button>
+      <input type="text" id="search" placeholder="🔍 Rechercher une tâche..." />
+      <select id="filter-status">
+        <option value="all">Toutes</option>
+        <option value="active">Non terminées</option>
+        <option value="completed">Terminées</option>
+      </select>
+      <button id="export-btn">⬇️ Exporter</button>
+    </div>
+
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="Ajouter une tâche..." required />
+      <input type="date" id="deadline" />
+      <select id="category">
+        <option value="Général">📂 Général</option>
+        <option value="Travail">💼 Travail</option>
+        <option value="Maison">🏠 Maison</option>
+        <option value="Urgent">⏰ Urgent</option>
+      </select>
+      <button type="submit">Ajouter</button>
+    </form>
+
+    <div id="stats">
+      <span>Total : <strong id="stat-total">0</strong></span>
+      <span>✅ : <strong id="stat-done">0</strong></span>
+      <span>🕒 : <strong id="stat-left">0</strong></span>
+    </div>
+
+    <div class="progress-bar">
+      <div id="progress-fill"></div>
+    </div>
+
+    <ul id="todo-list"></ul>
+  </div>
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js").then(() =>
+        console.log("Service Worker enregistré ✅")
+      );
+    }
+  </script>
+</body>
+</html>
